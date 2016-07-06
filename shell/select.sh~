@@ -1,0 +1,12 @@
+select_parm()
+{
+    i=0;
+    echo "Please select input:"
+    for parm in "$@"
+    do
+	(i++;)
+	echo "$i:$parm"
+    done
+}
+
+select_parm 7620 7628

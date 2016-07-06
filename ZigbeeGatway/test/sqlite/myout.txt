@@ -1,0 +1,9 @@
+ time.c,main,38
+result = 255 time.c,main,31
+48
+ time.c,main,32
+56
+ time.c,main,33
+140
+ time.c,main,38
+result = 255

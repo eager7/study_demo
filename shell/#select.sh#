@@ -1,0 +1,24 @@
+select_parm()
+{
+    while :
+    do
+        i=0;
+	echo "Please select input number:"
+	for parm in "$@"
+	do
+	    i=$(expr $i + 1)
+	    echo "$i:$parm"
+	done
+	read input_number
+	if [ $(expr $input_number > $i) ]
+	then
+	    echo "your input is invalid, please input again"
+	else
+	    eval select_option='$'$input_number
+	    echo "your input is $input_number, then begin build $echo "your input is $input_number, then begin build $(expr $input_number)""
+	    break
+	fi
+    done
+}
+
+select_parm 7620 7628

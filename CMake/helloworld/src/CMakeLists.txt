@@ -1,0 +1,4 @@
+ADD_EXECUTABLE(hello helloworld.c)
+SET(EXECUTABLE_OUT_DIR ${PROJECT_BINARY_DIR}/bin)
+
+
