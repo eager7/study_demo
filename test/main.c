@@ -1,9 +1,9 @@
 #include <stdio.h>
 
+int global = 10;
 int main(int argc, char *argv[])
 {
-	printf("sizeof(void *) = %d\n",sizeof(void *));
-	printf("num = %d\n",0%255);
-    fprintf(stderr, "Hello World\n");
+//    int global = 9;
+	printf("num = %d\n",global);
 	return 0;
 }
