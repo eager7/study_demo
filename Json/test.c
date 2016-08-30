@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 #include "json_object.h"
 #include "bits.h"
 struct json_object* json_tokener_parse(const char *str);
@@ -216,16 +217,14 @@ int main (int argc, char *argv[])
 	
 	json_object *pJsonTest = NULL, *pJsonAddr = NULL;
 
+	pJsonTest = json_tokener_parse(str);
+	printf("%s\n", json_object_get_string(pJsonTest));
+	
+	pJsonAddr = json_object_object_get(pJsonTest,"device_address");
+	printf("Length = %ld\n", strlen(json_object_get_string(pJsonTest)));
+	json_object_put(pJsonTest);
+	json_object_put(pJsonAddr);
 
-	while(1){
-		pJsonTest = json_tokener_parse(str);
-		printf("%s\n", json_object_get_string(pJsonTest));
-		
-		pJsonAddr = json_object_object_get(pJsonTest,"device_address");
-		json_object_put(pJsonTest);
-		json_object_put(pJsonAddr);
-
-	}
 #endif
 	return 0;
 }
